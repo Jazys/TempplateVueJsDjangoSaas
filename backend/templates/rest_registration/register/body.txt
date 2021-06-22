@@ -1,0 +1,3 @@
+Bonjour {{ user }},
+Merci pour votre inscription. Cliquez sur le lien ci-dessous pour valider votre compte:
+{{ verification_url | safe }}

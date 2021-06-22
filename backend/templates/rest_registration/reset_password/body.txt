@@ -1,0 +1,2 @@
+Vous pouvez réinitialiser votre mot de passe en cliquant sur ce lien:
+{{ verification_url | safe }}

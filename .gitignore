@@ -4,6 +4,10 @@ backend/venv/*
 backend/static
 backend/*.pyc
 backend/*.sqlite3
+backend/app/migrations/__pycache__/*.pyc
+backend/app/management/__pycache__/*.pyc
+backend/app/adminwidget/__pycache__/*.pyc
+backend/core/maintenance_mode_state.txt
 
 backend/app/migrations/[0-9]*
 

@@ -1,0 +1,9 @@
+{% if email_already_used %}
+Vous ou quelqu'un d'autre a demandé la modification de cette adresse e-mail pour laquelle il existe déjà un compte.
+Vous devez soit supprimer le compte attribué à cet e-mail, soit modifier l'e-mail de ce compte.
+
+Si ce n'est pas vous, veuillez ignorer cet e-mail.
+{% else %}
+Vous pouvez vérifier l'email {{ email }} en cliquant sur ce lien:
+{{ verification_url | safe }}
+{% endif %}

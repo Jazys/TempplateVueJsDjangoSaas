@@ -1,0 +1,1 @@
+{% if email_already_used %}Votre adresse email est déjà utilisée{% else %}Veuillez vérifier votre nouvelle adresse e-mail{% endif %}

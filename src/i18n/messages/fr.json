@@ -1,0 +1,44 @@
+{
+    "ViewHome": {        
+    },
+    "ViewLogin": {
+        "headline": "Connexion",
+        "username": "Nom d'utilisateur",
+        "password": "Mot de passe",
+        "forgot-password": "Mot de passe oublié ?",
+        "connect": "Se connecter",
+        "no-account-yet": "Pas encore de compte ?",
+        "create-account": "Créer une compte"
+    },
+    "ViewPasswordReset": {
+        "headline": "Demande de récupération du mot de passe",
+        "email": "Email du compte",
+        "submit": "Valider"
+    },
+    "CommonNavigation": {    
+        "title": "Ajoute ton titre",  
+        "login": "Connexion",
+        "logout": "Déconnexion",
+        "dark-mode": "Mode foncé",
+        "light-mode": "Mode clair"
+    },
+    "CommonFooter": {
+        "footline": "",
+        "foottitle": "Ton titre"
+    },  
+    "MenuTranslation": {
+        "translations": "Traductions"
+    },   
+    "ViewRegister": {
+        "title": "Enregistrement",
+        "validate-user-label": "Nom utilisateur",
+        "validate-user-email": "Email",
+        "validate-user-password": "Mot de passe",
+        "validate-cgu": "J'accepte les ",
+        "cgu-ref": "Conditions Générales d'Utilisations",
+        "btn-register": "S'enregistrer",
+        "dialog-cgu": "CGU",
+        "dialog-quit": "Quitter",
+        "alert-message": "Enregistrement effectué"
+    }
+}

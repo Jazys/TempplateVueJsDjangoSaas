@@ -1,0 +1,44 @@
+{
+    "ViewHome": {
+    },
+    "ViewLogin": {
+        "headline": "Sign in",
+        "username": "Username",
+        "password": "Password",
+        "forgot-password": "Forgot password ?",
+        "connect": "Login",
+        "no-account-yet": "No account yet ?",
+        "create-account": "Sign up"
+    },
+    "ViewPasswordReset": {
+        "headline": "Password recovery request",
+        "email": "Email",
+        "submit": "Request"
+    },
+    "CommonNavigation": {
+        "title": "Add Your Title",
+        "login": "Sign-in",
+        "logout": "Logout",
+        "dark-mode": "Dark mode",
+        "light-mode": "Light mode"
+    },
+    "CommonFooter": {
+        "footline": "",
+        "foottitle": "Your title"
+    },
+    "MenuTranslation": {
+        "translations": "Traductions"
+    },
+    "ViewRegister": {
+        "title": "Sign up",
+        "validate-user-label": "User name",
+        "validate-user-email": "Email",
+        "validate-user-password": "password",
+        "validate-cgu": "I'm agree with",
+        "cgu-ref": "CGU",
+        "btn-register": "sign up",
+        "dialog-cgu": "CGU",
+        "dialog-quit": "Quit",
+        "alert-message": "You can sign in"
+    }
+}

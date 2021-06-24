@@ -54,12 +54,10 @@ export const auth = {
     register({ commit }, user) {
       return AuthService.register(user).then(
         response => {
-          console.log(response)
           commit('registerSuccess');
           return Promise.resolve(response.data);
         },
         error => {
-          console.log(error)
           commit('registerFailure');
           return Promise.reject(error);
         }
@@ -68,12 +66,10 @@ export const auth = {
     passwordReset({ commit },user) {
       return AuthService.passwordReset(user).then(
         response => {
-          //console.log(response)
           commit('passwordResetSuccess'); 
           return Promise.resolve(response.data);
         },
         error => {
-          //console.log(error)
           commit('passwordResetFailure');
           return Promise.reject(error);
         }

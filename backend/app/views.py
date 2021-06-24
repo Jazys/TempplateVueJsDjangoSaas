@@ -2,11 +2,6 @@ from rest_framework import permissions
 
 from rest_framework.generics import RetrieveUpdateDestroyAPIView
 from rest_framework.throttling import UserRateThrottle
-from app.serializers import CustomRolesSerializer
-from app.serializers import FilesSerializer
-from app.models import CustomRoles
-from app.models import UploadedFile
-from . import models
 
 from .forms import UploadFileForm
 
@@ -15,6 +10,7 @@ from rest_framework.response import Response
 from rest_framework.generics import ListCreateAPIView, ListAPIView
 
 from . import serializers
+from . import models
 
 from rest_framework.renderers import JSONRenderer
 
@@ -31,11 +27,11 @@ import traceback
 class CustomRolesPost(ListCreateAPIView):
     throttle_classes = [UserRateThrottle]
     renderer_classes = [JSONRenderer]
-    serializer_class = CustomRolesSerializer
+    serializer_class = serializers.CustomRolesSerializer
     permission_classes = [permissions.IsAuthenticated]
 
     def get_queryset(self):
-        roles = CustomRoles.objects.all()
+        roles = models.CustomRoles.objects.all()
         return roles
 
     # Create a new Pav
@@ -58,7 +54,7 @@ class CustomRolesPost(ListCreateAPIView):
 class UploadFileView(ListCreateAPIView):
     renderer_classes = [JSONRenderer]
     permission_classes = [permissions.IsAuthenticated]
-    serializer_class = FilesSerializer
+    serializer_class = serializers.FilesSerializer
 
     def post(self, request, *args, **kwargs):
         form = UploadFileForm(request.POST, request.FILES)
@@ -71,7 +67,7 @@ class UploadFileView(ListCreateAPIView):
             return Response({'error': 'Error in format'}, status=status.HTTP_400_BAD_REQUEST)
 
     def get(self, request, *args, **kwargs):
-        files = UploadedFile.objects.all()
+        files = models.UploadedFile.objects.all()
         serializer = self.serializer_class(files, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
 

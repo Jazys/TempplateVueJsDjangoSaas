@@ -8,7 +8,6 @@ class AuthService {
 
   //logging for a user
   login(user) {
-    console.log(API_URL)
     return axios
       .post(API_URL + 'accounts/login/', {
         login: user.username,
@@ -28,7 +27,6 @@ class AuthService {
 
   //get token from a user
   getToken(user) {
-    console.log(API_URL)
     return axios
       .post(API_URL + 'token/', {
         username: user.username,
@@ -104,8 +102,6 @@ class AuthService {
       .catch(function (error) {
 
         var reasonError = 'Unknown';
-
-        //console.log(error.response.data)
 
         if ("email" in error.response.data)
           reasonError = error.response.data.email;

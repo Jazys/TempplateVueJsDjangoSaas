@@ -241,7 +241,7 @@ CSRF_COOKIE_SECURE = False
 AUTHENTICATION_BACKENDS = ("django_otp.backends.OTPAuthBackend", )
 
 CORS_ALLOWED_ORIGINS = [
-    "http://127.0.0.1:8081", 
+    "http://127.0.0.1:8080", 
 ]
 
 CSRF_TRUSTED_ORIGINS = [

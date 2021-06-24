@@ -3,8 +3,8 @@
 ## Django Rest Api Backend
 
 For using in no docker environnement : \
-Install python and pip. \
-Run pip install -r requirements.txt to install dependencies\
+Install python3 and pip3. \
+Run pip3 install -r requirements.txt to install dependencies
 
 ```
 python manage.py migrate
@@ -15,7 +15,7 @@ For running, python manage.py runserver 0.0.0.0
 
 ## VueJS frontend
 
-For using in no docker environnement :\
+For using in no docker environnement :
 ```
 Install npm
 npm install @vue/cli@3.7.0 -g (to use vuecli)

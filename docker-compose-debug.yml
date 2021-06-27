@@ -26,12 +26,12 @@ volumes:
     driver: local
     driver_opts:
       type: none
-      device: /root/temp
+      device: /absolute/pathofDockerCompose
       o: bind
 
   backend-app:
     driver: local
     driver_opts:
       type: none
-      device: /root/temp/backend
+      device: /absolute/pathofDockerCompose/backend
       o: bind

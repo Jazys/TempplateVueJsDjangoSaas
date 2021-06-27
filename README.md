@@ -45,6 +45,19 @@ npm run test (for launching front)
 
 ```
 
+## Developpment environnement with Docker
+
+Make sure your backend settings are configured. \
+Make sure your .env Front is configured .\
+Make sure you are installed Docker and Docker-compose. \
+In docker-compose-debug.yml file change the path of your directory (volume section)
+
+```
+docker-compose -f docker-compose-debug.yml up  (use -d for detach)
+```
+
+By default, the login/password of default admin user is admin/pass. (change in entrypoint.sh)
+
 
 ## Next steps
 - use docker for debug and production environnement

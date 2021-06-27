@@ -1,0 +1,7 @@
+
+FROM node:lts-alpine
+WORKDIR /app
+COPY package.json ./
+COPY . .
+RUN npm install @vue/cli@3.7.0 -g
+CMD ["sh", "-c", "npm install && npm run test"]

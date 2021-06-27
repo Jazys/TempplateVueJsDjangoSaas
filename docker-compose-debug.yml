@@ -1,0 +1,37 @@
+version: "3.8"
+
+services:
+
+   django_rest:
+    build:
+        context: ./backend
+        dockerfile: DockerfileBackend
+    command: coreRest init
+    volumes:
+      - backend-app:/work
+    ports:
+      - "8000:8000"
+
+   front:
+    build:
+        context: .
+        dockerfile: DockerfileFrontend
+    ports:
+      - "8080:8080"
+    volumes:
+      - vue-app:/app
+
+volumes:
+  vue-app:
+    driver: local
+    driver_opts:
+      type: none
+      device: /root/temp
+      o: bind
+
+  backend-app:
+    driver: local
+    driver_opts:
+      type: none
+      device: /root/temp/backend
+      o: bind

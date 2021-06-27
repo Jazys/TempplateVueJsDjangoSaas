@@ -13,6 +13,7 @@ Install python3 and pip3. \
 Run pip3 install -r requirements.txt to install dependencies
 
 ```
+python manage.py makemigrations
 python manage.py migrate
 python manage.py createsuperuser (and follow instructions)
 

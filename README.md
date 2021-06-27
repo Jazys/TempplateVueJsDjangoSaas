@@ -17,7 +17,7 @@ python manage.py makemigrations
 python manage.py migrate
 python manage.py createsuperuser (and follow instructions)
 
-For running, python manage.py runserver 0.0.0.0
+For running, python manage.py runserver 0.0.0.0:8000
 ```
 
 ## VueJS frontend

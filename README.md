@@ -1,5 +1,11 @@
 # TempplateVueJsDjangoSaas
 
+After cloning repo, enter it, and use dos2unix (sure file can be read by linux system)
+```
+dos2unix *.* && dos2unix backend/*.*
+
+```
+
 ## Django Rest Api Backend
 
 For using in no docker environnement : \

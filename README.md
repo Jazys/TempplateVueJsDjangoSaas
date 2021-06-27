@@ -21,6 +21,7 @@ CORS_ALLOWED_ORIGINS = [
 ]
 ```
 
+Prepare and run backend :
 ```
 python3 manage.py makemigrations
 python3 manage.py migrate
@@ -32,7 +33,7 @@ For running, python3 manage.py runserver 0.0.0.0:8000
 ## VueJS frontend
 
 For using in no docker environnement : \
-Install npm \
+Install npm 
 
 ```
 npm install @vue/cli@3.7.0 -g (to use vuecli)

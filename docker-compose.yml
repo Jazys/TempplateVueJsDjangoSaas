@@ -1,0 +1,32 @@
+version: "3.8"
+   
+services:
+   
+   django_rest:
+    build:
+        context: ./backend
+        dockerfile: DockerfileBackend
+    command: coreRest init
+    volumes:
+      - ./volumes/conf/settings.py:/work/core/settings.py
+      - backend-migrations:/work/app/migrations
+      - backend-static:/work/static
+
+   nginxfile:
+    build: 
+        context: ./backend/nginx
+        dockerfile: Dockerfile
+    volumes:
+        - ./media:/media
+        - ./static:/static
+    ports:
+          - "8000:80"
+    command: /bin/sh -c "nginx -g 'daemon off;'"
+    
+   front:
+    build: 
+        context: .
+        dockerfile: Dockerfile-Prod
+    ports:
+      - "8080:8080"
+

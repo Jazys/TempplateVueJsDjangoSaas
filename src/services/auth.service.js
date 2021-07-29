@@ -1,8 +1,9 @@
 import axios from 'axios';
 import authHeader from './auth.header';
 import decode from 'jwt-decode'
+import { URL_BACKEND } from '../config/config';
 
-const API_URL = process.env.VUE_APP_API_ENDPOINT + '/api/v1/';
+const API_URL = URL_BACKEND + '/api/v1/';
 
 class AuthService {
 

@@ -31,8 +31,6 @@ services:
     build: 
         context: .
         dockerfile: Dockerfile-Prod
-    environment:
-      - VUE_APP_API_ENDPOINT=http://143.198.62.233:8000
     ports:
       - "8080:8099"
 

@@ -47,8 +47,8 @@ npm run test (for launching front)
 
 ## Developpment environnement with Docker
 
-Make sure your backend settings are configured. \
-Make sure your .env Front is configured .\
+Make sure your backend settings are configured. (change CORS_ALLOWED_ORIGINS with your frontend web adress) \
+In frontend src, edit config/config.js file for setting URL backend \
 Make sure you are installed Docker and Docker-compose. \
 In docker-compose-debug.yml file change the path of your directory (volume section)
 
@@ -57,10 +57,24 @@ docker-compose -f docker-compose-debug.yml up  (use -d for detach)
 ```
 
 By default, the login/password of default admin user is admin/pass. (change in entrypoint.sh)
+It will running in debug, so you can see stack trace of error in web page.
 
+## Production environnement with Docker
+
+Make sure your backend settings_prod are configured. (change CORS_ALLOWED_ORIGINS with your frontend web adress) \
+In frontend src, edit config/config.js file for setting URL backend \
+Make sure you are installed Docker and Docker-compose. \
+Create in backend dir, media and static dir and app/migrations. They will be share in the docker \
+In docker-compose.yml file change the path of your directory (volume section backend and frontend)
+
+```
+docker-compose up  (use -d for detach)
+```
+
+By default, the login/password of default admin user is admin/pass. (change in entrypoint_prod.sh)
+No stack, error 404 when the ressource was not found for example.
 
 ## Next steps
-- use docker for debug and production environnement
 - use VM for ready code plateform
 - add test in django
 - add somes features

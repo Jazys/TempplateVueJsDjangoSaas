@@ -10,7 +10,7 @@ services:
     ports:
       - 8000
     volumes:
-      - /root/TempplateVueJsDjangoSaas/backend/core/settings.py:/work/core/settings.py
+      - /root/TempplateVueJsDjangoSaas/backend/core/settings_prod.py:/work/core/settings.py
       - /root/TempplateVueJsDjangoSaas/backend/app/migrations:/work/app/migrations
       - /root/TempplateVueJsDjangoSaas/backend/static:/work/static
       - /root/TempplateVueJsDjangoSaas/backend/media:/work/media

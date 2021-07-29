@@ -7,6 +7,6 @@ RUN apt-get update &&\
 COPY requirements.txt /work/
 RUN pip install -r requirements.txt
 COPY . /work/
-COPY ./entrypoint.sh /entrypoint.sh
+COPY ./entrypoint_prod.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]

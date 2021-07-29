@@ -7,18 +7,22 @@ services:
         context: ./backend
         dockerfile: DockerfileBackend
     command: coreRest init
+    ports:
+      - 8000
     volumes:
-      - ./volumes/conf/settings.py:/work/core/settings.py
-      - backend-migrations:/work/app/migrations
-      - backend-static:/work/static
+      - /root/TempplateVueJsDjangoSaas/backend/core/settings.py:/work/core/settings.py
+      - /root/TempplateVueJsDjangoSaas/backend/app/migrations:/work/app/migrations
+      - /root/TempplateVueJsDjangoSaas/backend/static:/work/static
+      - /root/TempplateVueJsDjangoSaas/backend/media:/work/media
+      - /root/TempplateVueJsDjangoSaas/backend/db.sqlite3:/work/db.sqlite3
 
    nginxfile:
     build: 
-        context: ./backend/nginx
-        dockerfile: Dockerfile
+        context: ./backend
+        dockerfile: DockerfileNginx
     volumes:
-        - ./media:/media
-        - ./static:/static
+        - /root/TempplateVueJsDjangoSaas/backend/media:/media
+        - /root/TempplateVueJsDjangoSaas/backend/static:/static
     ports:
           - "8000:80"
     command: /bin/sh -c "nginx -g 'daemon off;'"
@@ -27,6 +31,8 @@ services:
     build: 
         context: .
         dockerfile: Dockerfile-Prod
+    environment:
+      - VUE_APP_API_ENDPOINT=http://143.198.62.233:8000
     ports:
-      - "8080:8080"
+      - "8080:8099"
 
